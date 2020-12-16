@@ -1,0 +1,98 @@
+<PageSchema>
+  <pageforms_Form name="Person">
+    <CreateTitle>Create person</CreateTitle>
+    <EditTitle>Edit person</EditTitle>
+    <standardInputs freeTextLabel="Free text" inputFreeText="1" inputWatch="1" inputSave="1" inputPreview="1" inputCancel="1"/>
+  </pageforms_Form>
+  <Template name="Person" format="standard">
+    <Field name="gnd">
+      <Label>GND ID</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_gnd_id">
+        <Type>External identifier</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="wikidata">
+      <Label>Wikidata ID</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_wikidata_id">
+        <Type>External identifier</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="alias" list="list">
+      <Label>Alias</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Description>Aliasse der Person</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_alias">
+        <Type>Text</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="occupation" list="list">
+      <Label>Occupation</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_occupation">
+        <Type>Keyword</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="employer" list="list">
+      <Label>Employer</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Institutions</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_employer">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="date_born">
+      <Label>Date born</Label>
+      <pageforms_FormInput>
+        <InputType>datepicker</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="date_born">
+        <Type>Date</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="birth_place">
+      <Label>Birth place</Label>
+      <pageforms_FormInput>
+        <InputType>combobox</InputType>
+        <Parameter name="values from category">Places</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_birth_place">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="residency" list="list">
+      <Label>Residency</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Places</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_residency">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="nationality" list="list">
+      <Label>Nationality</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Places</Parameter>
+        <Description>Entsprechendes Land eintragen oder auswählen</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_nationality">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+  </Template>
+</PageSchema>

@@ -1,0 +1,54 @@
+<PageSchema>
+  <pageforms_Form name="Place">
+    <CreateTitle>Create place</CreateTitle>
+    <EditTitle>Edit place</EditTitle>
+    <standardInputs freeTextLabel="Free text" inputFreeText="1" inputWatch="1" inputSave="1" inputPreview="1" inputCancel="1"/>
+  </pageforms_Form>
+  <Template name="Place" format="standard">
+    <Field name="gnd">
+      <Label>GND ID</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_gnd_id">
+        <Type>External identifier</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="wikidata">
+      <Label>Wikidata ID</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_wikidata_id">
+        <Type>External identifier</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="geonames">
+      <Label>Geonames ID</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_geonames_id">
+        <Type>Text</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="hov">
+      <Label>HOV ID</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_hov_id">
+        <Type>External identifier</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="coordinates">
+      <Label>Coordinates</Label>
+      <pageforms_FormInput>
+        <InputType>leaflet</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_coordinates">
+        <Type>Geographic coordinates</Type>
+      </semanticmediawiki_Property>
+    </Field>
+  </Template>
+</PageSchema>

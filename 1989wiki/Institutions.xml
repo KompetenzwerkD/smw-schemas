@@ -1,0 +1,55 @@
+<PageSchema>
+  <pageforms_Form name="Institution">
+    <CreateTitle>Create institution</CreateTitle>
+    <EditTitle>Edit institution</EditTitle>
+    <standardInputs freeTextLabel="Free text" inputFreeText="1" inputWatch="1" inputSave="1" inputPreview="1" inputCancel="1"/>
+  </pageforms_Form>
+  <Template name="Institution" format="standard">
+    <Field name="gnd">
+      <Label>GND ID</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_gnd_id">
+        <Type>External identifier</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="wikidata">
+      <Label>Wikidata ID</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_wikidata_id">
+        <Type>External identifier</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="location" list="list">
+      <Label>Location</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Places</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="is_located_in">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="adress">
+      <Label>Adress</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_adress">
+        <Type>Text</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="homepage">
+      <Label>Homepage</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_homepage">
+        <Type>URL</Type>
+      </semanticmediawiki_Property>
+    </Field>
+  </Template>
+</PageSchema>

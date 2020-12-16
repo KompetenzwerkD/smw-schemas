@@ -1,0 +1,20 @@
+<PageSchema>
+  <pageforms_Form name="Language">
+    <CreateTitle>Create Language</CreateTitle>
+    <EditTitle>Edit Language</EditTitle>
+    <standardInputs freeTextLabel="Free text" inputFreeText="1" inputWatch="1" inputSave="1" inputPreview="1" inputCancel="1"/>
+  </pageforms_Form>
+  <Template name="Language" format="standard">
+    <Field name="iso_639-3">
+      <Label>ISO-Code (639-3)</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+        <Description>three letter code according to ISO 639-3</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="iso_639-3">
+        <Type>Text</Type>
+      </semanticmediawiki_Property>
+    </Field>
+  </Template>
+</PageSchema>
