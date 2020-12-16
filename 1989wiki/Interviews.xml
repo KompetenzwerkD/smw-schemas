@@ -1,0 +1,253 @@
+<PageSchema>
+  <pageforms_Form name="Interview">
+    <CreateTitle>Create interview</CreateTitle>
+    <EditTitle>Edit interview</EditTitle>
+    <standardInputs freeTextLabel="Free text" inputFreeText="1" inputWatch="1" inputSave="1" inputPreview="1" inputCancel="1"/>
+  </pageforms_Form>
+  <Template name="Interview" format="standard">
+    <Field name="project" list="list">
+      <Label>Project</Label>
+      <pageforms_FormInput>
+        <InputType>dropdown</InputType>
+        <Parameter name="values from category">Projects</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="belongs_to_project">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="interview_date">
+      <Label>Interview date</Label>
+      <pageforms_FormInput>
+        <InputType>datepicker</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="interview_date">
+        <Type>Date</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="language" list="list">
+      <Label>Language</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Languages</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_language">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="interviewer" list="list">
+      <Label>Interviewer</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Persons</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_interviewer">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="interviewed_person" list="list">
+      <Label>Interviewed Person(s)</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Persons</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_interviewed_person">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="transcriber" list="list">
+      <Label>Transcriber(s)</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Persons</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_transcriber">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="interview_file_location">
+      <Label>Interview file location</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+        <Description>lokaler Verzeichnispfad zur Datei</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="interview_file_location">
+        <Type>Text</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="transcription_file_location">
+      <Label>Transcription file location</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+        <Description>lokaler Verzeichnispfad zur Datei</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="transcription_file_location">
+        <Type>Text</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="Interview_situation" list="list">
+      <Label>Interview situation</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Description>Terme, die die Interviewsituation beschreiben</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_interview_situation">
+        <Type>Text</Type>
+      </semanticmediawiki_Property>
+    </Field>
+  </Template>
+  <Template name="Rights" format="standard">
+    <Field name="rights_statement">
+      <Label>Rights statement (Link)</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+        <Description>Lizenz des Datensatzes als Verweis auf eine URL, welche die Lizenzangaben enthält</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_rights_statement">
+        <Type>URL</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="usage_rights">
+      <Label>Usage rights</Label>
+      <pageforms_FormInput>
+        <InputType>textarea</InputType>
+        <Description>Erläuterungen zum Inhaber der Rechte der Daten (falls abweichend)</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_usage_rights">
+        <Type>Text</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="access_rights">
+      <Label>Access rights</Label>
+      <pageforms_FormInput>
+        <InputType>dropdown</InputType>
+        <Parameter name="values from category">Access_Rights</Parameter>
+        <Description>Allgemeine Klassifikation der Zugriffsrechte</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_access_rights">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+  </Template>
+  <Template name="InterviewDescription" format="standard">
+    <Field name="gnd">
+      <Label>GND subject index</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_gnd_id">
+        <Type>External identifier</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="bsb">
+      <Label>BSB subject index</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_bsb_id">
+        <Type>External identifier</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="has_keyword" list="list">
+      <Label>Keywords (content-based)</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Description>Auf den Inhalt des Interviews bezogene Stichworte</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_keyword">
+        <Type>Keyword</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="keyword_professional" list="list">
+      <Label>Keyword (professional/discipline-based)</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Description>Fachliche bzw. disziplinbezogene Stichworte zum Interview</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_keyword_professional">
+        <Type>Keyword</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="discussed time" list="list">
+      <Label>Discussed time (start)</Label>
+      <pageforms_FormInput>
+        <InputType>datepicker</InputType>
+        <Description>Beginn der im Interview beschriebenen Zeitspanne</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="discussed_time_start">
+        <Type>Date</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="discussed time end">
+      <Label>Discussed time (end)</Label>
+      <pageforms_FormInput>
+        <InputType>datepicker</InputType>
+        <Description>Ende der beschriebenen Zeitspanne</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="discussed_time_end">
+        <Type>Date</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="related_place" list="list">
+      <Label>Related places (content)</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Places</Parameter>
+        <Description>Orte, die mit dem Inhalt des Interviews in Relation stehen</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_related_place">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="related_institution" list="list">
+      <Label>Related institutions</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Institutions</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_related_institution">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+  </Template>
+  <Template name="InterviewPersonRelation" multiple="multiple" format="standard">
+    <pageforms_TemplateDetails>
+      <Label>Related Persons</Label>
+      <AddAnotherText>Add another person</AddAnotherText>
+    </pageforms_TemplateDetails>
+    <semanticmediawiki_ConnectingProperty name="person_interview_relation"/>
+    <Field name="related_person">
+      <Label>Related Person</Label>
+      <pageforms_FormInput>
+        <InputType>combobox</InputType>
+        <Parameter name="values from category">Persons</Parameter>
+        <Description>Personenname</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_related_person">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="role" list="list">
+      <Label>Role</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Description>Rolle, welche die beteiligte Person einnimmt als Freitext</Description>
+        <DescriptionTooltipMode>on</DescriptionTooltipMode>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_role">
+        <Type>Text</Type>
+      </semanticmediawiki_Property>
+    </Field>
+  </Template>
+</PageSchema>
