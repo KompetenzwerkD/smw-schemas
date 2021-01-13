@@ -1,0 +1,97 @@
+<PageSchema>
+  <pageforms_Form name="Event">
+    <CreateTitle>Create event</CreateTitle>
+    <EditTitle>Edit event</EditTitle>
+    <standardInputs freeTextLabel="Free text"/>
+  </pageforms_Form>
+  <Template name="Event" format="standard">
+    <Field name="host_institution">
+      <Label>Host institution</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Institutions</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_host_institution">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="start_date">
+      <Label>Start date</Label>
+      <pageforms_FormInput>
+        <InputType>datepicker</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="start_date">
+        <Type>Date</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="end_date">
+      <Label>End date</Label>
+      <pageforms_FormInput>
+        <InputType>datepicker</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="end_date">
+        <Type>Date</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="location" list="list">
+      <Label>Location</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="located_in">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="related_person" list="list">
+      <Label>Related persons</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Persons</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_related_person">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="submission_deadline">
+      <Label>Submission deadline</Label>
+      <pageforms_FormInput>
+        <InputType>datepicker</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_submission_deadline">
+        <Type>Date</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="registration deadline">
+      <Label>Registration deadline</Label>
+      <pageforms_FormInput>
+        <InputType>datepicker</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_registration_deadline">
+        <Type>Date</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="keyword" list="list">
+      <Label>Keywords</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_keyword">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="event_type">
+      <Label>Event type</Label>
+      <pageforms_FormInput>
+        <InputType>text with autocomplete</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_event_type">
+        <Type>Text</Type>
+        <AllowedValue>Workshop</AllowedValue>
+        <AllowedValue>Konferenz</AllowedValue>
+        <AllowedValue>Vortrag</AllowedValue>
+        <AllowedValue>Diskussion</AllowedValue>
+        <AllowedValue>Anderes</AllowedValue>
+      </semanticmediawiki_Property>
+    </Field>
+  </Template>
+</PageSchema>

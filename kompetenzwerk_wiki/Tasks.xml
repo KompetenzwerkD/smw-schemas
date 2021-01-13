@@ -1,0 +1,57 @@
+<PageSchema>
+  <pageforms_Form name="Task">
+    <CreateTitle>Create task</CreateTitle>
+    <EditTitle>Edit task</EditTitle>
+    <standardInputs freeTextLabel="Free text"/>
+  </pageforms_Form>
+  <Template name="Task" format="standard">
+    <Field name="related_institution" list="list">
+      <Label>Related institiution(s)</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Institutions</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_related_institution">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="related_projects" list="list">
+      <Label>Related project(s)</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Projects</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_related_project">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="related_person" list="list">
+      <Label>Related person(s)</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Persons</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_related_person">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="finished">
+      <Label>Is finished?</Label>
+      <pageforms_FormInput>
+        <InputType>checkbox</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="is_finished">
+        <Type>Boolean</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="keyword" list="list">
+      <Label>Keywords</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_keyword">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+  </Template>
+</PageSchema>

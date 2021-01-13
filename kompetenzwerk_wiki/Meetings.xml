@@ -1,0 +1,67 @@
+<PageSchema>
+  <pageforms_Form name="Meeting">
+    <CreateTitle>Create meeting</CreateTitle>
+    <EditTitle>Edit meeting</EditTitle>
+    <standardInputs freeTextLabel="Free text" inputFreeText="1" inputSave="1" inputCancel="1"/>
+  </pageforms_Form>
+  <Template name="Meeting" format="standard">
+    <Field name="attendee" list="list">
+      <Label>Attendee(s)</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Persons</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_attendee">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="related_task" list="list">
+      <Label>Related tasks(s)</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Tasks</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_related_task">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="related_project" list="list">
+      <Label>Related projects(s)</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Projects</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_related_project">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="related_institution" list="list">
+      <Label>Related institution(s)</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Institutions</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_related_institution">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="date">
+      <Label>Date</Label>
+      <pageforms_FormInput>
+        <InputType>datetimepicker</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_date">
+        <Type>Date</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="keyword" list="list">
+      <Label>Keyword(s)</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_keyword">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+  </Template>
+</PageSchema>

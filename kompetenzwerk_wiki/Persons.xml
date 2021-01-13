@@ -1,0 +1,55 @@
+<PageSchema>
+  <pageforms_Form name="Person">
+    <CreateTitle>Create person</CreateTitle>
+    <EditTitle>Edit person</EditTitle>
+    <standardInputs freeTextLabel="Free text" inputFreeText="1" inputWatch="1" inputSave="1" inputPreview="1" inputCancel="1"/>
+  </pageforms_Form>
+  <Template name="Person" format="standard">
+    <Field name="gnd">
+      <Label>GND ID</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_gnd_id">
+        <Type>External identifier</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="wikidata">
+      <Label>Wikidata ID</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_wikidata_id">
+        <Type>External identifier</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="orcid" list="list">
+      <Label>Orcid ID</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_orcid_id">
+        <Type>External identifier</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="institution" list="list">
+      <Label>Institution(s)</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Institutions</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="belongs_to">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="email">
+      <Label>Email</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_email">
+        <Type>Email</Type>
+      </semanticmediawiki_Property>
+    </Field>
+  </Template>
+</PageSchema>

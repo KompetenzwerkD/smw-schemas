@@ -1,0 +1,66 @@
+<PageSchema>
+  <pageforms_Form name="Project">
+    <CreateTitle>Create project</CreateTitle>
+    <EditTitle>Edit project</EditTitle>
+    <standardInputs freeTextLabel="Free text"/>
+  </pageforms_Form>
+  <Template name="Project" format="standard">
+    <Field name="member" list="list">
+      <Label>Member</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Persons</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_member">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="institution" list="list">
+      <Label>Institution</Label>
+      <pageforms_FormInput>
+        <InputType>tokens</InputType>
+        <Parameter name="values from category">Institutions</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_host_institution">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="homepage">
+      <Label>Homepage</Label>
+      <pageforms_FormInput>
+        <InputType>text</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_homepage">
+        <Type>URL</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="date_started">
+      <Label>Date started</Label>
+      <pageforms_FormInput>
+        <InputType>datepicker</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="date_started">
+        <Type>Date</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="date_ended">
+      <Label>Date ended</Label>
+      <pageforms_FormInput>
+        <InputType>datepicker</InputType>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="date_ended">
+        <Type>Date</Type>
+      </semanticmediawiki_Property>
+    </Field>
+    <Field name="parent_project">
+      <Label>Parent project</Label>
+      <pageforms_FormInput>
+        <InputType>dropdown</InputType>
+        <Parameter name="values from category">Projects</Parameter>
+      </pageforms_FormInput>
+      <semanticmediawiki_Property name="has_parent_project">
+        <Type>Page</Type>
+      </semanticmediawiki_Property>
+    </Field>
+  </Template>
+</PageSchema>
