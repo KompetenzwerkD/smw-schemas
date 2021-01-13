@@ -20,7 +20,7 @@ Internes Wiki der Werkstatt des Komptenzwerkes. Ziel des Wikis ist die Unterstü
 
 ## 1989 Wiki
 
-Wiki des Verbundsprojektes ["Multiple Transformationen - Gesellschaftliche Erfahrungen und kultureller Wandel in Ostdeutschland und Mitteleuropa vor und nach 1989"](https://multitrafo.hypotheses.org/). Ziel des Wikis war die Erfassung von Metadaten zu Forschungsdaten (primär zu Interviewdaten, aber auch andere Ressourcen, wie z.B. Bilder, Textdaten, ...). Metadaten hier umfassen sowohl administrtive, technische und rechtliche Angaben, sowie beschreibende Metadaten.
+Wiki des Verbundsprojektes ["Multiple Transformationen - Gesellschaftliche Erfahrungen und kultureller Wandel in Ostdeutschland und Mitteleuropa vor und nach 1989"](https://multitrafo.hypotheses.org/). Ziel des Wikis war die Erfassung von Metadaten zu Forschungsdaten (primär zu Interviewdaten, aber auch andere Ressourcen, wie z.B. Bilder, Textdaten, ...). Metadaten hier umfassen sowohl administrative, technische und rechtliche Angaben, sowie beschreibende Metadaten.
 
 ### Entitäten
 * Persons
@@ -31,7 +31,7 @@ Wiki des Verbundsprojektes ["Multiple Transformationen - Gesellschaftliche Erfah
 * Resources
 * Languages
 
-## Linzenz
+## Lizenz
 
 CC-0
 
